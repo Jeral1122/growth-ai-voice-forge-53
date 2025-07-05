@@ -90,7 +90,7 @@ export const ServicesSection = () => {
               {/* Image section */}
               <div className="relative h-64 sm:h-72 md:h-80 overflow-hidden rounded-t-2xl">
                 <div className="image-container max-w-full text-center p-4 sm:p-6">
-                  <img alt="Man making outbound call on smartphone" className="responsive-image w-full h-auto max-w-full rounded-xl shadow-lg border border-gold/20 transition-transform duration-300 group-hover:scale-105" src="/lovable-uploads/370d79e8-ef83-44fc-b7e7-26a8b96dc1e6.png" />
+                  <img alt="Man making outbound call on smartphone" className="responsive-image w-full h-auto max-w-full rounded-xl shadow-lg border border-gold/20 transition-transform duration-300 group-hover:scale-105" src="/lovable-uploads/7b591fcf-7fbb-4006-9ec0-a421b18a9090.jpg" />
                 </div>
                 {/* Small accent icon */}
                 <div className="absolute top-4 right-4">
