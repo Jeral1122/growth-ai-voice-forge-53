@@ -1,36 +1,32 @@
-
 import React from 'react';
 import { Phone, PhoneCall } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
-
 export const ServicesSection = () => {
   const navigate = useNavigate();
-  const { ref, isVisible } = useScrollReveal();
-
+  const {
+    ref,
+    isVisible
+  } = useScrollReveal();
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     });
   };
-
   const handleInboundCallsClick = () => {
     navigate('/inbound-calls');
     setTimeout(() => {
       scrollToTop();
     }, 100);
   };
-
   const handleOutboundCallsClick = () => {
     navigate('/outbound-calls');
     setTimeout(() => {
       scrollToTop();
     }, 100);
   };
-
-  return (
-    <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6" ref={ref}>
+  return <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6" ref={ref}>
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
         <div className={`text-center mb-12 sm:mb-16 md:mb-20 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
@@ -54,12 +50,14 @@ export const ServicesSection = () => {
         {/* Services Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10">
           {/* Inbound Calls Card */}
-          <div className={`group relative transition-all duration-700 hover-lift ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '0.2s' }}>
+          <div className={`group relative transition-all duration-700 hover-lift ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{
+          transitionDelay: '0.2s'
+        }}>
             <div className="relative bg-gradient-to-br from-gray-900/80 to-charcoal/90 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/50 transition-all duration-300 hover:border-neon-green/50 hover:shadow-[0_0_25px_rgba(164,255,0,0.3)]">
               {/* Image section with responsive styling */}
               <div className="relative h-64 sm:h-72 md:h-80 overflow-hidden rounded-t-2xl">
                 <div className="image-container max-w-full text-center p-4 sm:p-6">
-                  <img alt="Young man using voice assistant on smartphone outdoors" className="responsive-image w-full h-auto max-w-full rounded-xl shadow-lg border border-neon-green/20 transition-transform duration-300 group-hover:scale-105" src="/lovable-uploads/d7ed7872-2705-4904-aac8-3d1a94e694c0.jpg" />
+                  <img alt="Young man using voice assistant on smartphone outdoors" className="responsive-image w-full h-auto max-w-full rounded-xl shadow-lg border border-neon-green/20 transition-transform duration-300 group-hover:scale-105" src="/lovable-uploads/c684015e-43ab-490d-97c9-9debfa128307.jpg" />
                 </div>
                 {/* Small accent icon */}
                 <div className="absolute top-4 right-4">
@@ -85,7 +83,9 @@ export const ServicesSection = () => {
           </div>
 
           {/* Outbound Calls Card */}
-          <div className={`group relative transition-all duration-700 hover-lift ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '0.4s' }}>
+          <div className={`group relative transition-all duration-700 hover-lift ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{
+          transitionDelay: '0.4s'
+        }}>
             <div className="relative bg-gradient-to-br from-gray-900/80 to-charcoal/90 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/50 transition-all duration-300 hover:border-gold/50 hover:shadow-[0_0_25px_rgba(210,174,55,0.3)]">
               {/* Image section */}
               <div className="relative h-64 sm:h-72 md:h-80 overflow-hidden rounded-t-2xl">
@@ -117,10 +117,11 @@ export const ServicesSection = () => {
         </div>
 
         {/* Bottom separator */}
-        <div className={`mt-12 sm:mt-16 md:mt-20 transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`} style={{ transitionDelay: '0.6s' }}>
+        <div className={`mt-12 sm:mt-16 md:mt-20 transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`} style={{
+        transitionDelay: '0.6s'
+      }}>
           <div className="h-px bg-gradient-to-r from-transparent via-neon-green/50 to-transparent"></div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
