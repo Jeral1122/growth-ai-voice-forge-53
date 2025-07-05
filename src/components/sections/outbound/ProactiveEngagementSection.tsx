@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Check, Target } from 'lucide-react';
 
@@ -37,7 +36,7 @@ export const ProactiveEngagementSection = () => {
               </div>
             </div>
 
-            <button className="bg-gradient-to-r from-gold to-neon-green text-charcoal px-8 py-4 rounded-full font-montserrat font-semibold text-lg btn-cta-animated">
+            <button className="btn-pill-animated-gradient">
               Get Started
             </button>
           </div>
