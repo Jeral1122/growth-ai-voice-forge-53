@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 import { Users, Award, TrendingUp, ArrowRight, Calendar, Target, Zap, Instagram } from 'lucide-react';
 const About = () => {
@@ -102,33 +103,38 @@ const About = () => {
           </div>
 
           {/* Team Member 1 - Tommy */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center mb-12 lg:mb-20">
-            {/* Image Column */}
-            <div className="relative order-2 lg:order-1 flex justify-center">
-              <div className="relative bg-gradient-to-br from-gray-900/80 to-charcoal/90 backdrop-blur-sm rounded-2xl p-4 sm:p-6 lg:p-8 border border-gray-700/50 shadow-2xl max-w-sm w-full">
-                <div className="w-full aspect-square max-w-xs mx-auto rounded-2xl overflow-hidden bg-gray-800 border border-gray-600">
-                  <img alt="Tommy" className="w-full h-full object-cover" src="/lovable-uploads/56a71415-09f5-487b-a021-e71617177522.jpg" />
+          <div className="mb-12 lg:mb-20">
+            {/* Mobile Layout */}
+            <div className="lg:hidden">
+              {/* Image */}
+              <div className="flex justify-center mb-6">
+                <div className="relative bg-gradient-to-br from-gray-900/80 to-charcoal/90 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 shadow-2xl max-w-sm w-full">
+                  <div className="w-full aspect-square max-w-xs mx-auto rounded-2xl overflow-hidden bg-gray-800 border border-gray-600">
+                    <img alt="Tommy" className="w-full h-full object-cover" src="/lovable-uploads/56a71415-09f5-487b-a021-e71617177522.jpg" />
+                  </div>
+                  <div className="absolute -top-2 -right-2 w-16 h-16 bg-neon-green/20 rounded-full blur-xl animate-pulse"></div>
                 </div>
-                <div className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 w-16 h-16 sm:w-24 sm:h-24 bg-neon-green/20 rounded-full blur-xl animate-pulse"></div>
               </div>
-            </div>
-
-            {/* Content Column */}
-            <div className="space-y-6 order-1 lg:order-2 text-center lg:text-left">
-              <div>
-                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-montserrat font-bold text-white mb-2">
+              
+              {/* Name and Position */}
+              <div className="text-center mb-4">
+                <h3 className="text-2xl font-montserrat font-bold text-white mb-2">
                   Tommy
                 </h3>
-                <p className="text-lg sm:text-xl text-neon-green font-montserrat font-semibold mb-4">
+                <p className="text-lg text-neon-green font-montserrat font-semibold mb-4">
                   Co-owner
                 </p>
-                <div className="flex gap-4 mb-6 justify-center lg:justify-start">
-                  <a href="https://www.instagram.com/tornatom/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-neon-green/20 rounded-lg flex items-center justify-center hover:bg-neon-green/30 transition-colors">
-                    <Instagram size={24} className="text-neon-green" />
-                  </a>
-                </div>
               </div>
-              <div className="space-y-4 text-gray-300 font-open-sans leading-relaxed text-sm sm:text-base">
+
+              {/* Instagram Icon */}
+              <div className="flex justify-center mb-6">
+                <a href="https://www.instagram.com/tornatom/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-neon-green/20 rounded-lg flex items-center justify-center hover:bg-neon-green/30 transition-colors">
+                  <Instagram size={24} className="text-neon-green" />
+                </a>
+              </div>
+
+              {/* Context */}
+              <div className="space-y-4 text-gray-300 font-open-sans leading-relaxed text-sm px-4">
                 <p>
                   At GROWTH AI, we're a specialist AI agency helping businesses streamline operations and scale 
                   conversations using cutting-edge Voice Agent technology.
@@ -142,26 +148,84 @@ const About = () => {
                 </p>
               </div>
             </div>
+
+            {/* Desktop Layout */}
+            <div className="hidden lg:grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+              {/* Image Column */}
+              <div className="relative order-2 lg:order-1 flex justify-center">
+                <div className="relative bg-gradient-to-br from-gray-900/80 to-charcoal/90 backdrop-blur-sm rounded-2xl p-4 sm:p-6 lg:p-8 border border-gray-700/50 shadow-2xl max-w-sm w-full">
+                  <div className="w-full aspect-square max-w-xs mx-auto rounded-2xl overflow-hidden bg-gray-800 border border-gray-600">
+                    <img alt="Tommy" className="w-full h-full object-cover" src="/lovable-uploads/56a71415-09f5-487b-a021-e71617177522.jpg" />
+                  </div>
+                  <div className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 w-16 h-16 sm:w-24 sm:h-24 bg-neon-green/20 rounded-full blur-xl animate-pulse"></div>
+                </div>
+              </div>
+
+              {/* Content Column */}
+              <div className="space-y-6 order-1 lg:order-2 text-center lg:text-left">
+                <div>
+                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-montserrat font-bold text-white mb-2">
+                    Tommy
+                  </h3>
+                  <p className="text-lg sm:text-xl text-neon-green font-montserrat font-semibold mb-4">
+                    Co-owner
+                  </p>
+                  <div className="flex gap-4 mb-6 justify-center lg:justify-start">
+                    <a href="https://www.instagram.com/tornatom/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-neon-green/20 rounded-lg flex items-center justify-center hover:bg-neon-green/30 transition-colors">
+                      <Instagram size={24} className="text-neon-green" />
+                    </a>
+                  </div>
+                </div>
+                <div className="space-y-4 text-gray-300 font-open-sans leading-relaxed text-sm sm:text-base">
+                  <p>
+                    At GROWTH AI, we're a specialist AI agency helping businesses streamline operations and scale 
+                    conversations using cutting-edge Voice Agent technology.
+                  </p>
+                  <p>
+                    We design, build, and deploy custom AI Voice Agents that handle calls, qualify leads, book appointments, 
+                    answer FAQs, 24/7.
+                  </p>
+                  <p>
+                    Whether you're in sales, customer support, operations, our voice agents work seamlessly with your team and systems.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Team Member 2 - Victor Reece */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-            {/* Content Column */}
-            <div className="space-y-6 order-2 lg:order-1 text-center lg:text-left">
-              <div>
-                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-montserrat font-bold text-white mb-2">
-                  Victor Reece
-                </h3>
-                <p className="text-lg sm:text-xl text-gold font-montserrat font-semibold mb-4">
-                  Founder
-                </p>
-                <div className="flex gap-4 mb-6 justify-center lg:justify-start">
-                  <a href="https://www.instagram.com/victorreeceg/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-gold/20 rounded-lg flex items-center justify-center hover:bg-gold/30 transition-colors">
-                    <Instagram size={24} className="text-gold" />
-                  </a>
+          <div>
+            {/* Mobile Layout */}
+            <div className="lg:hidden">
+              {/* Image */}
+              <div className="flex justify-center mb-6">
+                <div className="relative bg-gradient-to-br from-gray-900/80 to-charcoal/90 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 shadow-2xl max-w-sm w-full">
+                  <div className="w-full aspect-square max-w-xs mx-auto rounded-2xl overflow-hidden bg-gray-800 border border-gray-600">
+                    <img alt="Victor Reece" className="w-full h-full object-cover" src="/lovable-uploads/b181c1d6-d877-4440-9167-9900d61ddc2b.jpg" />
+                  </div>
+                  <div className="absolute -top-2 -left-2 w-20 h-20 bg-gold/20 rounded-full blur-xl animate-pulse"></div>
                 </div>
               </div>
-              <div className="space-y-4 text-gray-300 font-open-sans leading-relaxed text-sm sm:text-base">
+              
+              {/* Name and Position */}
+              <div className="text-center mb-4">
+                <h3 className="text-2xl font-montserrat font-bold text-white mb-2">
+                  Victor Reece
+                </h3>
+                <p className="text-lg text-gold font-montserrat font-semibold mb-4">
+                  Founder
+                </p>
+              </div>
+
+              {/* Instagram Icon */}
+              <div className="flex justify-center mb-6">
+                <a href="https://www.instagram.com/victorreeceg/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-gold/20 rounded-lg flex items-center justify-center hover:bg-gold/30 transition-colors">
+                  <Instagram size={24} className="text-gold" />
+                </a>
+              </div>
+
+              {/* Context */}
+              <div className="space-y-4 text-gray-300 font-open-sans leading-relaxed text-sm px-4">
                 <p>
                   We've worked across all industries: Digital Marketing, Real Estate, Property, Construction, Accounting, 
                   Hospitality, Medical, FinTech, Dental.
@@ -178,13 +242,48 @@ const About = () => {
               </div>
             </div>
 
-            {/* Image Column */}
-            <div className="relative order-1 lg:order-2 flex justify-center">
-              <div className="relative bg-gradient-to-br from-gray-900/80 to-charcoal/90 backdrop-blur-sm rounded-2xl p-4 sm:p-6 lg:p-8 border border-gray-700/50 shadow-2xl max-w-sm w-full">
-                <div className="w-full aspect-square max-w-xs mx-auto rounded-2xl overflow-hidden bg-gray-800 border border-gray-600">
-                  <img alt="Victor Reece" className="w-full h-full object-cover" src="/lovable-uploads/b181c1d6-d877-4440-9167-9900d61ddc2b.jpg" />
+            {/* Desktop Layout */}
+            <div className="hidden lg:grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+              {/* Content Column */}
+              <div className="space-y-6 order-2 lg:order-1 text-center lg:text-left">
+                <div>
+                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-montserrat font-bold text-white mb-2">
+                    Victor Reece
+                  </h3>
+                  <p className="text-lg sm:text-xl text-gold font-montserrat font-semibold mb-4">
+                    Founder
+                  </p>
+                  <div className="flex gap-4 mb-6 justify-center lg:justify-start">
+                    <a href="https://www.instagram.com/victorreeceg/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-gold/20 rounded-lg flex items-center justify-center hover:bg-gold/30 transition-colors">
+                      <Instagram size={24} className="text-gold" />
+                    </a>
+                  </div>
                 </div>
-                <div className="absolute -top-2 -left-2 sm:-top-4 sm:-left-4 w-20 h-20 sm:w-32 sm:h-32 bg-gold/20 rounded-full blur-xl animate-pulse"></div>
+                <div className="space-y-4 text-gray-300 font-open-sans leading-relaxed text-sm sm:text-base">
+                  <p>
+                    We've worked across all industries: Digital Marketing, Real Estate, Property, Construction, Accounting, 
+                    Hospitality, Medical, FinTech, Dental.
+                  </p>
+                  <p>
+                    We partner closely with our clients to understand their workflows and operational goals.
+                  </p>
+                  <p>
+                    From pilot to production, we deliver scalable Voice AI solutions tailored to their business needs.
+                  </p>
+                  <p>
+                    Our mission is to solve problems and create real value with the most powerful technology.
+                  </p>
+                </div>
+              </div>
+
+              {/* Image Column */}
+              <div className="relative order-1 lg:order-2 flex justify-center">
+                <div className="relative bg-gradient-to-br from-gray-900/80 to-charcoal/90 backdrop-blur-sm rounded-2xl p-4 sm:p-6 lg:p-8 border border-gray-700/50 shadow-2xl max-w-sm w-full">
+                  <div className="w-full aspect-square max-w-xs mx-auto rounded-2xl overflow-hidden bg-gray-800 border border-gray-600">
+                    <img alt="Victor Reece" className="w-full h-full object-cover" src="/lovable-uploads/b181c1d6-d877-4440-9167-9900d61ddc2b.jpg" />
+                  </div>
+                  <div className="absolute -top-2 -left-2 sm:-top-4 sm:-left-4 w-20 h-20 sm:w-32 sm:h-32 bg-gold/20 rounded-full blur-xl animate-pulse"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -196,3 +295,4 @@ const About = () => {
     </section>;
 };
 export default About;
+
