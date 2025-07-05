@@ -97,21 +97,21 @@ const Contact = () => {
               <div className="flex gap-4">
                 <a 
                   href="#" 
-                  className="btn-icon-pill bg-gray-800 hover:bg-neon-green/20 flex items-center justify-center"
+                  className="w-10 h-10 bg-gray-800 hover:bg-neon-green/20 rounded-lg flex items-center justify-center button-hover transition-colors duration-300"
                 >
-                  <Twitter size={20} className="text-gray-400 hover:text-neon-green transition-colors duration-300" />
+                  <Twitter size={20} className="text-gray-400 hover:text-neon-green" />
                 </a>
                 <a 
                   href="#" 
-                  className="btn-icon-pill bg-gray-800 hover:bg-neon-green/20 flex items-center justify-center"
+                  className="w-10 h-10 bg-gray-800 hover:bg-neon-green/20 rounded-lg flex items-center justify-center button-hover transition-colors duration-300"
                 >
-                  <Linkedin size={20} className="text-gray-400 hover:text-neon-green transition-colors duration-300" />
+                  <Linkedin size={20} className="text-gray-400 hover:text-neon-green" />
                 </a>
                 <a 
                   href="#" 
-                  className="btn-icon-pill bg-gray-800 hover:bg-neon-green/20 flex items-center justify-center"
+                  className="w-10 h-10 bg-gray-800 hover:bg-neon-green/20 rounded-lg flex items-center justify-center button-hover transition-colors duration-300"
                 >
-                  <Github size={20} className="text-gray-400 hover:text-neon-green transition-colors duration-300" />
+                  <Github size={20} className="text-gray-400 hover:text-neon-green" />
                 </a>
               </div>
             </div>
@@ -216,7 +216,7 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className="btn-pill-animated-primary w-full flex items-center justify-center gap-2 relative overflow-hidden"
+                className="w-full bg-neon-green hover:bg-neon-green/90 text-charcoal px-8 py-4 rounded-lg font-montserrat font-bold uppercase text-lg btn-primary-animated flex items-center justify-center gap-2 relative overflow-hidden"
               >
                 <Send size={20} className="relative z-10" />
                 <span className="relative z-10">Send Message</span>

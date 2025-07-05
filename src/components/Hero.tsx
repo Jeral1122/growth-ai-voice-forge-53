@@ -43,14 +43,14 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-8 sm:mb-12 md:mb-20 max-w-lg sm:max-w-none mx-auto px-4 sm:px-0 opacity-0 animate-scale-in" style={{ animationDelay: '0.8s' }}>
             <button 
               onClick={() => scrollToSection('#connect')} 
-              className="btn-pill-animated-primary w-full sm:w-auto relative overflow-hidden"
+              className="text-charcoal px-6 sm:px-8 md:px-10 py-3 sm:py-4 rounded-full font-semibold text-sm sm:text-base md:text-lg w-full sm:w-auto bg-neon-green hover:bg-neon-green/90 btn-primary-animated transition-all duration-300 relative overflow-hidden"
             >
               <span className="relative z-10">Book a Call</span>
             </button>
             
             <button 
               onClick={() => navigate('/demo')} 
-              className="btn-pill-animated-secondary w-full sm:w-auto flex items-center justify-center gap-2"
+              className="bg-gray-800/60 hover:bg-gray-700/60 text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 rounded-full font-semibold text-sm sm:text-base md:text-lg flex items-center justify-center gap-2 backdrop-blur-sm border border-gold/30 w-full sm:w-auto btn-secondary-animated transition-all duration-300"
             >
               <Play size={16} className="sm:hidden" />
               <Play size={20} className="hidden sm:block" />

@@ -25,170 +25,168 @@
     box-shadow: 0 0 25px rgba(164, 255, 0, 0.3);
   }
   
-  /* Modern Pill Button Animations */
-  .btn-pill {
-    @apply rounded-full px-8 py-4 font-semibold text-lg transition-all duration-300 ease-out;
-    transform: translateY(0) scale(1);
+  /* Enhanced Button Animations */
+  .button-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
-    border: none;
-    cursor: pointer;
+    transform: translateZ(0);
   }
-
-  .btn-pill:hover {
-    transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-  }
-
-  .btn-pill:active {
-    transform: translateY(0) scale(0.98);
-    transition: all 0.1s ease;
-  }
-
-  /* Primary Pill Button - Neon Green */
-  .btn-pill-primary {
-    @apply btn-pill bg-neon-green text-charcoal font-bold;
-    box-shadow: 0 4px 15px rgba(164, 255, 0, 0.3);
-  }
-
-  .btn-pill-primary:hover {
-    @apply bg-neon-green;
-    box-shadow: 0 8px 25px rgba(164, 255, 0, 0.4);
-    filter: brightness(1.05);
-  }
-
-  /* Secondary Pill Button - Dark with border */
-  .btn-pill-secondary {
-    @apply btn-pill bg-gray-800/60 text-white border-2 border-gold/30;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  }
-
-  .btn-pill-secondary:hover {
-    @apply bg-gray-700/60 border-gold/50;
-    box-shadow: 0 8px 25px rgba(210, 174, 55, 0.2);
-  }
-
-  /* Gradient Pill Button */
-  .btn-pill-gradient {
-    @apply btn-pill text-charcoal font-bold;
-    background: linear-gradient(135deg, #A4FF00 0%, #D2AE37 100%);
-    box-shadow: 0 4px 15px rgba(164, 255, 0, 0.3);
-  }
-
-  .btn-pill-gradient:hover {
-    background: linear-gradient(135deg, #A4FF00 0%, #D2AE37 100%);
-    box-shadow: 0 8px 25px rgba(164, 255, 0, 0.4);
-    filter: brightness(1.1);
-  }
-
-  /* Ripple Effect for Pills */
-  .btn-pill-ripple {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .btn-pill-ripple::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.3);
-    transform: translate(-50%, -50%);
-    transition: width 0.6s ease, height 0.6s ease;
-    z-index: 0;
-  }
-
-  .btn-pill-ripple:active::before {
-    width: 300px;
-    height: 300px;
-  }
-
-  .btn-pill-ripple > * {
-    position: relative;
-    z-index: 1;
-  }
-
-  /* Shimmer Effect for Pills */
-  .btn-pill-shimmer::after {
+  
+  .button-hover:before {
     content: '';
     position: absolute;
     top: 0;
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-    transition: left 0.5s ease;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1;
   }
-
-  .btn-pill-shimmer:hover::after {
+  
+  .button-hover:hover:before {
     left: 100%;
   }
 
-  /* Pulse Animation for Pills */
-  .btn-pill-pulse {
-    animation: pill-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  .button-hover:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   }
 
-  @keyframes pill-pulse {
+  .button-hover:active {
+    transform: translateY(0) scale(0.98);
+    transition: all 0.1s ease;
+  }
+
+  /* Pulse Animation for Primary Buttons */
+  .button-pulse {
+    animation: button-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes button-pulse {
     0%, 100% {
       opacity: 1;
-      transform: scale(1);
     }
     50% {
-      opacity: 0.9;
+      opacity: 0.8;
       transform: scale(1.02);
     }
   }
 
-  /* Bounce Animation for Pills */
-  .btn-pill-bounce:hover {
-    animation: pill-bounce 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  /* Shimmer Effect */
+  .button-shimmer {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+    background-size: 200% 200%;
+    animation: shimmer 3s ease-in-out infinite;
   }
 
-  @keyframes pill-bounce {
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  /* Bounce Animation */
+  .button-bounce:hover {
+    animation: bounce 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  @keyframes bounce {
     0%, 20%, 53%, 80%, 100% {
-      transform: translate3d(0, 0, 0) scale(1);
+      transform: translate3d(0, 0, 0);
     }
     40%, 43% {
-      transform: translate3d(0, -8px, 0) scale(1.02);
+      transform: translate3d(0, -8px, 0);
     }
     70% {
-      transform: translate3d(0, -4px, 0) scale(1.01);
+      transform: translate3d(0, -4px, 0);
     }
     90% {
-      transform: translate3d(0, -2px, 0) scale(1.005);
+      transform: translate3d(0, -2px, 0);
     }
   }
 
-  /* Combined Animation Classes for Pills */
-  .btn-pill-animated-primary {
-    @apply btn-pill-primary btn-pill-ripple btn-pill-shimmer;
+  /* Gradient Flow Animation */
+  .button-gradient-flow {
+    background: linear-gradient(-45deg, #A4FF00, #D2AE37, #A4FF00, #D2AE37);
+    background-size: 400% 400%;
+    animation: gradient-flow 3s ease infinite;
   }
 
-  .btn-pill-animated-secondary {
-    @apply btn-pill-secondary btn-pill-ripple;
+  @keyframes gradient-flow {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
   }
 
-  .btn-pill-animated-gradient {
-    @apply btn-pill-gradient btn-pill-ripple btn-pill-bounce;
+  /* Magnetic Effect */
+  .button-magnetic {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
   }
 
-  /* Legacy button classes for backward compatibility */
-  .btn-primary-animated {
-    @apply btn-pill-animated-primary;
+  .button-magnetic:hover {
+    transform: scale(1.05);
   }
 
-  .btn-secondary-animated {
-    @apply btn-pill-animated-secondary;
+  /* Neon Glow Effect */
+  .button-neon {
+    position: relative;
+    transition: all 0.3s ease;
   }
 
-  .btn-cta-animated {
-    @apply btn-pill-animated-gradient;
+  .button-neon:hover {
+    box-shadow: 
+      0 0 20px rgba(164, 255, 0, 0.5),
+      0 0 40px rgba(164, 255, 0, 0.3),
+      0 0 60px rgba(164, 255, 0, 0.1);
+    text-shadow: 0 0 10px rgba(164, 255, 0, 0.8);
+  }
+
+  /* Fixed rounded border animations */
+  .rounded-border-glow {
+    position: relative;
+    border-radius: inherit;
+    transition: all 0.3s ease;
+  }
+  
+  .rounded-border-glow::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: inherit;
+    background: linear-gradient(45deg, transparent, rgba(164, 255, 0, 0.3), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+  }
+  
+  .rounded-border-glow:hover::before {
+    opacity: 1;
+  }
+
+  /* Ensure rounded corners are preserved during transitions */
+  .preserve-rounded {
+    border-radius: inherit !important;
+  }
+  
+  .preserve-rounded * {
+    border-radius: inherit;
   }
 
   /* Enhanced logo loading animations */
@@ -207,25 +205,55 @@
     animation: logo-fade-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
 
-  /* Icon buttons */
-  .btn-icon-pill {
-    @apply rounded-full p-3 transition-all duration-300 ease-out;
-    transform: translateY(0) scale(1);
+  /* 3D Button Effect */
+  .button-3d {
+    transform-style: preserve-3d;
+    transition: transform 0.2s ease;
   }
 
-  .btn-icon-pill:hover {
-    transform: translateY(-2px) scale(1.1);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  .button-3d:hover {
+    transform: rotateX(15deg) rotateY(-15deg);
   }
 
-  /* Small pill buttons */
-  .btn-pill-sm {
-    @apply rounded-full px-6 py-2 font-semibold text-sm transition-all duration-300 ease-out;
-    transform: translateY(0) scale(1);
+  .button-3d:active {
+    transform: rotateX(5deg) rotateY(-5deg) scale(0.95);
   }
 
-  .btn-pill-sm:hover {
-    transform: translateY(-1px) scale(1.02);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  /* Ripple Effect */
+  .button-ripple {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .button-ripple::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease, height 0.3s ease;
+    z-index: 1;
+  }
+
+  .button-ripple:active::after {
+    width: 200px;
+    height: 200px;
+  }
+
+  /* Combined Animation Classes */
+  .btn-primary-animated {
+    @apply button-hover button-neon button-ripple;
+  }
+
+  .btn-secondary-animated {
+    @apply button-hover button-magnetic rounded-border-glow;
+  }
+
+  .btn-cta-animated {
+    @apply button-hover button-gradient-flow button-bounce;
   }
 }

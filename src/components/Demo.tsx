@@ -60,7 +60,7 @@ const Demo = () => {
                   {!isPlaying ? (
                     <button
                       onClick={handleDemoClick}
-                      className="btn-pill-animated-primary w-20 h-20 !p-0 flex items-center justify-center"
+                      className="bg-neon-green hover:bg-neon-green/90 text-charcoal w-20 h-20 rounded-full flex items-center justify-center btn-primary-animated"
                     >
                       <Play size={32} className="ml-1" />
                     </button>
@@ -111,7 +111,7 @@ const Demo = () => {
 
                 <button
                   onClick={handleDemoClick}
-                  className="btn-pill-animated-secondary w-full"
+                  className="w-full bg-transparent border-2 border-neon-green text-neon-green hover:bg-neon-green hover:text-charcoal px-6 py-3 rounded-lg font-montserrat font-semibold uppercase btn-secondary-animated"
                 >
                   Try the Demo
                 </button>
@@ -148,7 +148,7 @@ const Demo = () => {
             </p>
             <button
               onClick={scrollToConnect}
-              className="btn-pill-animated-gradient"
+              className="bg-gradient-to-r from-neon-green to-gold text-charcoal px-6 py-3 rounded-full font-montserrat font-semibold btn-cta-animated"
             >
               Schedule Your Personal Demo →
             </button>
