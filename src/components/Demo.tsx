@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Play, Volume2, Mic, Phone } from 'lucide-react';
 
@@ -59,7 +60,7 @@ const Demo = () => {
                   {!isPlaying ? (
                     <button
                       onClick={handleDemoClick}
-                      className="bg-neon-green hover:bg-neon-green/90 text-charcoal w-20 h-20 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+                      className="bg-neon-green hover:bg-neon-green/90 text-charcoal w-20 h-20 rounded-full flex items-center justify-center btn-primary-animated"
                     >
                       <Play size={32} className="ml-1" />
                     </button>
@@ -110,7 +111,7 @@ const Demo = () => {
 
                 <button
                   onClick={handleDemoClick}
-                  className="w-full bg-transparent border-2 border-neon-green text-neon-green hover:bg-neon-green hover:text-charcoal px-6 py-3 rounded-lg font-montserrat font-semibold uppercase transition-all duration-300"
+                  className="w-full bg-transparent border-2 border-neon-green text-neon-green hover:bg-neon-green hover:text-charcoal px-6 py-3 rounded-lg font-montserrat font-semibold uppercase btn-secondary-animated"
                 >
                   Try the Demo
                 </button>
@@ -147,7 +148,7 @@ const Demo = () => {
             </p>
             <button
               onClick={scrollToConnect}
-              className="bg-gradient-to-r from-neon-green to-gold text-charcoal px-6 py-3 rounded-full font-montserrat font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
+              className="bg-gradient-to-r from-neon-green to-gold text-charcoal px-6 py-3 rounded-full font-montserrat font-semibold btn-cta-animated"
             >
               Schedule Your Personal Demo →
             </button>

@@ -37,7 +37,7 @@ export const ProactiveEngagementSection = () => {
               </div>
             </div>
 
-            <button className="bg-gradient-to-r from-gold to-neon-green text-charcoal px-8 py-4 rounded-full font-montserrat font-semibold text-lg hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-gold/20">
+            <button className="bg-gradient-to-r from-gold to-neon-green text-charcoal px-8 py-4 rounded-full font-montserrat font-semibold text-lg btn-cta-animated">
               Get Started
             </button>
           </div>

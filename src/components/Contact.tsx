@@ -95,13 +95,22 @@ const Contact = () => {
             <div>
               <h4 className="text-white font-montserrat font-semibold mb-4">Follow Us</h4>
               <div className="flex gap-4">
-                <a href="#" className="w-10 h-10 bg-gray-800 hover:bg-neon-green/20 rounded-lg flex items-center justify-center transition-colors duration-300">
+                <a 
+                  href="#" 
+                  className="w-10 h-10 bg-gray-800 hover:bg-neon-green/20 rounded-lg flex items-center justify-center button-hover transition-colors duration-300"
+                >
                   <Twitter size={20} className="text-gray-400 hover:text-neon-green" />
                 </a>
-                <a href="#" className="w-10 h-10 bg-gray-800 hover:bg-neon-green/20 rounded-lg flex items-center justify-center transition-colors duration-300">
+                <a 
+                  href="#" 
+                  className="w-10 h-10 bg-gray-800 hover:bg-neon-green/20 rounded-lg flex items-center justify-center button-hover transition-colors duration-300"
+                >
                   <Linkedin size={20} className="text-gray-400 hover:text-neon-green" />
                 </a>
-                <a href="#" className="w-10 h-10 bg-gray-800 hover:bg-neon-green/20 rounded-lg flex items-center justify-center transition-colors duration-300">
+                <a 
+                  href="#" 
+                  className="w-10 h-10 bg-gray-800 hover:bg-neon-green/20 rounded-lg flex items-center justify-center button-hover transition-colors duration-300"
+                >
                   <Github size={20} className="text-gray-400 hover:text-neon-green" />
                 </a>
               </div>
@@ -207,10 +216,10 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className="w-full bg-neon-green hover:bg-neon-green/90 text-charcoal px-8 py-4 rounded-lg font-montserrat font-bold uppercase text-lg transition-all duration-300 btn-hover-effect flex items-center justify-center gap-2"
+                className="w-full bg-neon-green hover:bg-neon-green/90 text-charcoal px-8 py-4 rounded-lg font-montserrat font-bold uppercase text-lg btn-primary-animated flex items-center justify-center gap-2 relative overflow-hidden"
               >
-                <Send size={20} />
-                Send Message
+                <Send size={20} className="relative z-10" />
+                <span className="relative z-10">Send Message</span>
               </button>
 
               <p className="text-gray-500 font-open-sans text-sm text-center">
