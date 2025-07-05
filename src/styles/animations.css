@@ -1,0 +1,98 @@
+
+/* Animation utilities */
+@layer utilities {
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+  }
+  
+  .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .hover-glow:hover {
+    box-shadow: 0 0 25px rgba(164, 255, 0, 0.3);
+  }
+  
+  .button-hover {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .button-hover:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+  }
+  
+  .button-hover:hover:before {
+    left: 100%;
+  }
+
+  /* Fixed rounded border animations */
+  .rounded-border-glow {
+    position: relative;
+    border-radius: inherit;
+    transition: all 0.3s ease;
+  }
+  
+  .rounded-border-glow::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: inherit;
+    background: linear-gradient(45deg, transparent, rgba(164, 255, 0, 0.3), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+  }
+  
+  .rounded-border-glow:hover::before {
+    opacity: 1;
+  }
+
+  /* Ensure rounded corners are preserved during transitions */
+  .preserve-rounded {
+    border-radius: inherit !important;
+  }
+  
+  .preserve-rounded * {
+    border-radius: inherit;
+  }
+
+  /* Enhanced logo loading animations */
+  @keyframes logo-fade-up {
+    0% {
+      opacity: 0;
+      transform: translateY(20px) scale(0.95);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  .animate-logo-fade-up {
+    animation: logo-fade-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+}
