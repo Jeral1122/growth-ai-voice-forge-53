@@ -1,4 +1,5 @@
-import React, { useState, useEffect, forwardRef } from 'react';
+
+import React, { useState, useEffect, forwardRef, useRef } from 'react';
 import Vapi from '@vapi-ai/web';
 
 interface VapiWidgetProps {
@@ -20,6 +21,15 @@ const VapiWidget = forwardRef<any, VapiWidgetProps>(({
     role: string;
     text: string;
   }>>([]);
+  
+  const transcriptRef = useRef<HTMLDivElement>(null);
+
+  // Auto-scroll to bottom when new messages are added
+  useEffect(() => {
+    if (transcriptRef.current) {
+      transcriptRef.current.scrollTop = transcriptRef.current.scrollHeight;
+    }
+  }, [transcript]);
 
   useEffect(() => {
     const vapiInstance = new Vapi(apiKey);
@@ -115,7 +125,10 @@ const VapiWidget = forwardRef<any, VapiWidgetProps>(({
             </button>
           </div>
           
-          <div className="max-h-48 overflow-y-auto mb-3 p-3 bg-gray-900/50 rounded-lg border border-gray-700">
+          <div 
+            ref={transcriptRef}
+            className="max-h-48 overflow-y-auto mb-3 p-3 bg-gray-900/50 rounded-lg border border-gray-700 scroll-smooth"
+          >
             {transcript.length === 0 ? (
               <p className="text-gray-400 font-open-sans text-sm text-center py-4">
                 Conversation will appear here...
