@@ -18,7 +18,7 @@ export const ConnectSection = () => {
         const widget = document.querySelector('.calendly-inline-widget');
         if (widget && !widget.querySelector('iframe')) {
           window.Calendly.initInlineWidget({
-            url: 'https://calendly.com/muhammadjeralkhan/new-meeting',
+            url: 'https://calendly.com/d/cv2p-4g7-jqz/growthai-discovery-meeting?primary_color=17ee0c',
             parentElement: widget,
             prefill: {},
             utm: {}
@@ -50,11 +50,11 @@ export const ConnectSection = () => {
           <div className="bg-gradient-to-br from-gray-900/80 to-charcoal/90 backdrop-blur-sm rounded-2xl p-4 sm:p-6 md:p-8 border border-gray-700/50">
             <div 
               className="calendly-inline-widget" 
-              data-url="https://calendly.com/muhammadjeralkhan/new-meeting" 
+              data-url="https://calendly.com/d/cv2p-4g7-jqz/growthai-discovery-meeting?primary_color=17ee0c" 
               style={{ 
-                minWidth: '280px',
+                minWidth: '320px',
                 width: '100%',
-                height: '650px',
+                height: '700px',
                 border: 'none',
                 borderRadius: '8px'
               }}
