@@ -105,7 +105,7 @@ export const ServicesSection = () => {
                 <h4 className="text-xl sm:text-2xl md:text-3xl font-montserrat font-bold text-gold mb-4">
                   Outbound Calls
                 </h4>
-                <p className="text-gray-300 font-open-sans leading-relaxed text-sm sm:text-base mb-6">Fully automate outbound calls, lead qualification, booking appts, reminders, follow ups &amp; more</p>
+                <p className="text-gray-300 font-open-sans leading-relaxed text-sm sm:text-base mb-6">Fully automate outbound calls, lead qualification, booking appointments, reminders, follow ups &amp; more</p>
                 <button onClick={handleOutboundCallsClick} className="bg-gradient-to-r from-gold to-neon-green text-charcoal px-6 py-3 rounded-full font-montserrat font-semibold text-sm button-hover hover-lift transition-all duration-300">
                   Get Started →
                 </button>
