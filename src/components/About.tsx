@@ -48,14 +48,14 @@ const About = () => {
             <div className="grid sm:grid-cols-2 gap-6">
               <div className="flex items-start gap-4 p-4 rounded-xl bg-gray-900/30 border border-gray-700/30 backdrop-blur-sm">
                 <div className="w-12 h-12 bg-neon-green/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Users size={24} className="text-neon-green" />
+                  <Target size={24} className="text-neon-green" />
                 </div>
                 <div>
                   <h3 className="text-white font-montserrat font-semibold text-base mb-2">
-                    50+ Companies
+                    Proven Results
                   </h3>
                   <p className="text-gray-400 font-open-sans text-sm">
-                    Trust our AI solutions
+                    Delivering measurable growth
                   </p>
                 </div>
               </div>
@@ -66,10 +66,10 @@ const About = () => {
                 </div>
                 <div>
                   <h3 className="text-white font-montserrat font-semibold text-base mb-2">
-                    Industry Leader
+                    Cutting-Edge Tech
                   </h3>
                   <p className="text-gray-400 font-open-sans text-sm">
-                    In AI voice technology
+                    Latest AI voice technology
                   </p>
                 </div>
               </div>
