@@ -44,9 +44,11 @@ export const AnimatedTestimonials = ({
   }, [autoplay]);
 
   return (
-    <div className={cn("max-w-sm md:max-w-4xl mx-auto px-4 md:px-8 lg:px-12 py-20", className)}>
-      <div className="relative">
-        <div className="flex justify-center flex-col py-4">
+    <div className={cn("max-w-sm md:max-w-5xl mx-auto px-4 md:px-8 lg:px-12 py-12", className)}>
+      <div className="relative bg-gradient-to-br from-gray-800/20 to-gray-900/40 backdrop-blur-sm border border-gray-700/30 rounded-2xl p-8 md:p-12">
+        <div className="absolute inset-0 bg-gradient-to-br from-neon-green/5 to-transparent rounded-2xl"></div>
+        
+        <div className="relative z-10">
           <motion.div
             key={active}
             initial={{
@@ -64,36 +66,59 @@ export const AnimatedTestimonials = ({
             }}
             className="text-center"
           >
-            <h3 className="text-2xl font-bold text-white mb-2">
-              {testimonials[active].name}
-            </h3>
-            <motion.p 
-              className="text-lg text-gray-300 mt-8 max-w-4xl mx-auto"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ 
-                duration: 0.6, 
-                delay: 0.3,
-                ease: [0.4, 0.0, 0.2, 1]
-              }}
-            >
-              "{testimonials[active].quote}"
-            </motion.p>
+            <div className="mb-8">
+              <div className="text-neon-green text-6xl font-serif leading-none mb-4">"</div>
+              <motion.p 
+                className="text-lg md:text-xl text-gray-200 leading-relaxed max-w-4xl mx-auto font-light"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ 
+                  duration: 0.6, 
+                  delay: 0.3,
+                  ease: [0.4, 0.0, 0.2, 1]
+                }}
+              >
+                {testimonials[active].quote}
+              </motion.p>
+            </div>
+            
+            <div className="border-t border-gray-700/50 pt-6">
+              <h4 className="text-xl font-semibold text-white mb-1">
+                {testimonials[active].name}
+              </h4>
+            </div>
           </motion.div>
-          <div className="flex gap-4 pt-12 justify-center">
+          
+          <div className="flex gap-3 pt-8 justify-center">
             <button
               onClick={handlePrev}
-              className="h-10 w-10 rounded-full bg-gradient-to-br from-neon-green/20 to-neon-green/10 border border-neon-green/30 flex items-center justify-center group/button hover:from-neon-green/30 hover:to-neon-green/20 transition-all duration-300"
+              className="h-12 w-12 rounded-full bg-gradient-to-br from-gray-700/40 to-gray-800/60 border border-gray-600/40 flex items-center justify-center group/button hover:from-neon-green/20 hover:to-neon-green/10 hover:border-neon-green/40 transition-all duration-300 backdrop-blur-sm"
             >
-              <IconArrowLeft className="h-5 w-5 text-neon-green transition-transform duration-300" />
+              <IconArrowLeft className="h-5 w-5 text-gray-300 group-hover/button:text-neon-green transition-colors duration-300" />
             </button>
             <button
               onClick={handleNext}
-              className="h-10 w-10 rounded-full bg-gradient-to-br from-neon-green/20 to-neon-green/10 border border-neon-green/30 flex items-center justify-center group/button hover:from-neon-green/30 hover:to-neon-green/20 transition-all duration-300"
+              className="h-12 w-12 rounded-full bg-gradient-to-br from-gray-700/40 to-gray-800/60 border border-gray-600/40 flex items-center justify-center group/button hover:from-neon-green/20 hover:to-neon-green/10 hover:border-neon-green/40 transition-all duration-300 backdrop-blur-sm"
             >
-              <IconArrowRight className="h-5 w-5 text-neon-green transition-transform duration-300" />
+              <IconArrowRight className="h-5 w-5 text-gray-300 group-hover/button:text-neon-green transition-colors duration-300" />
             </button>
           </div>
+        </div>
+        
+        {/* Decorative dots */}
+        <div className="flex justify-center gap-2 mt-6">
+          {testimonials.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setActive(index)}
+              className={cn(
+                "w-2 h-2 rounded-full transition-all duration-300",
+                isActive(index) 
+                  ? "bg-neon-green w-8" 
+                  : "bg-gray-600 hover:bg-gray-500"
+              )}
+            />
+          ))}
         </div>
       </div>
     </div>
